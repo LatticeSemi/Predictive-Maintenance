@@ -67,10 +67,10 @@ def run_tflite_model(quant=True, test_label=0, tflite_file="motor-model.tflite",
 def main(args):
     input_data_path_normal = os.path.join(args.dataset_path, "1")
     input_data_path_broken = os.path.join(args.dataset_path, "0")
-    acc_tl_norm, total_images_tl_norm, correct_out_tl_norm = run_tflite_model(quant=True, test_label=1,
+    acc_tl_norm, total_images_tl_norm, correct_out_tl_norm = run_tflite_model(quant=True, test_label=1, tflite_file=args.tflite_path,
                                                                               input_data_path=input_data_path_normal)
 
-    acc_tl_brok, total_images_tl_brok, correct_out_tl_brok = run_tflite_model(quant=True, test_label=0,
+    acc_tl_brok, total_images_tl_brok, correct_out_tl_brok = run_tflite_model(quant=True, test_label=0, tflite_file=args.tflite_path,
                                                                               input_data_path=input_data_path_broken)
     print("Broken Accuracy {}\nNormal Accuracy {}".format(acc_tl_brok, acc_tl_norm))
 
