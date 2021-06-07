@@ -1,0 +1,8 @@
+python resnet_main.py \
+    --train_data_path=/home/dataset/training/data/tfrecords/ \
+    --log_root=./logs/train \
+    --train_dir=./logs/train \
+    --dataset='signlang' \
+    --image_size=64 \
+    --num_gpus=0 \
+    --mode=freeze

@@ -1,0 +1,1 @@
+python resnet_main.py --eval_data_path=/home/dataset/training/data/tfrecords/ --log_root=./logs/train --eval_dir=./logs/test --dataset='signlang' --image_size=64 --num_gpus=0 --mode=eval
